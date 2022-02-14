@@ -1,42 +1,42 @@
 const area = document.querySelector(".area");
-const filledSquares = document.querySelectorAll(".square");
+const squares = document.querySelectorAll(".square");
 
 const usedNumbers = [];
 const MAX_USED_NUMBERS_LENGTH = 15;
 const WIN_SITUATION = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0];
 
-// const fillSquaresWithRandomValues = () => {
-//   const MAX_SQUARE_VALUE = 15;
-//   const MIN_SQUARE_VALUE = 1;
+const fillSquaresWithRandomValues = () => {
+  const MAX_SQUARE_VALUE = 15;
+  const MIN_SQUARE_VALUE = 1;
 
-//   do {
-//     const randomNumber = Math.floor(
-//       Math.random() * MAX_SQUARE_VALUE + MIN_SQUARE_VALUE
-//     );
-//     const isUsed = checkIfNumberUsed(randomNumber);
+  do {
+    const randomNumber = Math.floor(
+      Math.random() * MAX_SQUARE_VALUE + MIN_SQUARE_VALUE
+    );
+    const isUsed = checkIfNumberUsed(randomNumber);
 
-//     if (!isUsed) {
-//       usedNumbers.push(randomNumber);
-//     }
-//   } while (usedNumbers.length < MAX_USED_NUMBERS_LENGTH);
+    if (!isUsed) {
+      usedNumbers.push(randomNumber);
+    }
+  } while (usedNumbers.length < MAX_USED_NUMBERS_LENGTH);
 
-//   return fillSquaresWithNumbers();
-// };
+  return fillSquaresWithNumbers();
+};
 
-// const fillSquaresWithNumbers = () => {
-//   const squaresCopy = [...squares];
+const fillSquaresWithNumbers = () => {
+  const squaresCopy = [...squares];
 
-//   for (let i = 0; i < squaresCopy.length; i++) {
-//     squaresCopy[i].textContent = usedNumbers[i];
-//   }
+  for (let i = 0; i < squaresCopy.length; i++) {
+    squaresCopy[i].textContent = usedNumbers[i];
+  }
 
-//   return squaresCopy;
-// };
+  return squaresCopy;
+};
 
-// const checkIfNumberUsed = (randomNumber) =>
-//   usedNumbers.includes(randomNumber) ? true : false;
+const checkIfNumberUsed = (randomNumber) =>
+  usedNumbers.includes(randomNumber) ? true : false;
 
-// const filledSquares = fillSquaresWithRandomValues();
+const filledSquares = fillSquaresWithRandomValues();
 
 const gameBoard = [
   [filledSquares[0], filledSquares[1], filledSquares[2], filledSquares[3]],
