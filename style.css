@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.area {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.square {
+  position: absolute;
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
